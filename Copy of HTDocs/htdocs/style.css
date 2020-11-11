@@ -1,0 +1,46 @@
+/* The complete body font if arial not found then sansserif font.  */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 0 auto;
+    width: 40em;
+}
+
+header{
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+
+main{
+    width: 100%;
+    clear: both;
+}
+
+main .image-box{
+    width: 24%;
+    float: left;
+}
+/* . means the class */
+.image-box img{
+    width: 90%;
+    height: 200px;
+    padding: 10px;
+}
+
+footer{
+    clear: both;
+
+}
+header .highlight_text{
+color: red;
+}
+
+h2#blue_text{
+    color: blueviolet;
+}
+
+.video-box{
+    width: 45%;
+    float: left;
+}

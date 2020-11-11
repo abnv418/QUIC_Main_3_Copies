@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>aioquic</title>
+        <link rel="stylesheet" href="./style.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Video HTTP3 Pages</h1>
+            <p>
+               Abhinav_Test)Page This is a test page for <a href="https://github.com/aiortc/aioquic/">aioquic</a>,
+                a QUIC and HTTP/3 implementation written in Python.
+            </p>
+                {% if request.scope["http_version"] == "3" %}      
+    
+            <p class = "highlight_text">
+                Congratulations, you loaded this page using HTTP/3!
+               
+            </p>
+            {% endif %}
+        </header>
+
+
+        <main>
+
+
+
+            <p class = "highlight_text">
+                Congratulations, you loaded this page using HTTP/3!
+               
+            </p>
+            <h2>Videos</h2>
+            <p> The following are the video for the test.</p>
+
+
+            
+        <div class="video-box">
+        <video width="320" height="240" controls autoplay>
+        <source src="1.mp4" type="video/mp4">
+         <source src="1.ogv" type="video/ogg">
+        </video>
+        </div>
+
+        <button onclick="playVid()" type="button">Play Video</button>
+        <button onclick="pauseVid()" type="button">Pause Video</button><br> 
+
+
+        <div class="video-box">
+            <video width="320" height="240" controls autoplay>
+            <source src="2.mp4" type="video/mp4">
+             <source src="2.ogv" type="video/ogg">
+            </video>
+            </div>        
+        </main>
+        <footer>
+           
+        <h2 id="blue_text">Available endpoints</h2>
+        <ul>
+            <li><strong>GET /</strong> returns the homepage</li>
+            <li><strong>GET /NNNNN</strong> returns NNNNN bytes of plain text</li>
+            <li><strong>POST /echo</strong> returns the request data</li>
+            <li>
+                <strong>CONNECT /ws</strong> runs a WebSocket echo service.
+                You must set the <em>:protocol</em> pseudo-header to <em>"websocket"</em>.
+            </li>
+            <li>There is also an <a href="/httpbin/">httpbin instance</a>.</li>
+        </ul>
+
+        </footer>
+        <script> 
+            var vid = document.getElementById("1.ogv"); 
+            
+            function playVid() { 
+              vid.play(); 
+            } 
+            
+            function pauseVid() { 
+              vid.pause(); 
+            } 
+            </script> 
+        
+    </body>
+</html>
